@@ -57,7 +57,16 @@
         if (callNow) func.apply(context, args);
       };
     }
+    
+    const slideIma = document.querySelectorAll('.slide-in');
+    for(let t of slideIma){
+      t.addEventListener('scroll', assi)
+    }
 
+    assi(){
+      slideIma.className += "active"
+    }
+    debounce(assi)
   </script>
 
   <style>
